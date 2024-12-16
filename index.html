@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model Viewer</title>
+    <!-- Include the model-viewer library -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+    <model-viewer 
+        src="./assets/SHIV.glb" 
+        ios-src="./assets/SHIV.usdz"
+        ar 
+        ar-modes="scene-viewer webxr quick-look" 
+        camera-controls 
+        tone-mapping="neutral" 
+        poster="./assets/poster.webp" 
+        shadow-intensity="1" 
+        autoplay>
+    </model-viewer>
+  
+
+</body>
+</html>

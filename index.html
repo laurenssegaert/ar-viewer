@@ -6,66 +6,66 @@
     <title>3D Model Viewer</title>
     <!-- Include the model-viewer library -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="splash.css"> <!-- Add the new CSS file for the splash screen -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
-    <!--  -->
 
-    <div class="grid">
-       
-        <model-viewer 
-        src="./assets/helmet.glb" 
-        ios-src="./assets/helmet.usdz"
-        ar 
-        ar-modes="scene-viewer webxr quick-look" 
-        camera-controls 
-        tone-mapping="neutral" 
-        poster="./assets/poster.webp" 
-        shadow-intensity="1" 
-        autoplay>
-    </model-viewer>
-    <model-viewer 
-    src="./assets/helmet.glb" 
-    ios-src="./assets/helmet.usdz"
-    ar 
-    ar-modes="scene-viewer webxr quick-look" 
-    camera-controls 
-    tone-mapping="neutral" 
-    poster="./assets/poster.webp" 
-    shadow-intensity="1" 
-    autoplay>
-</model-viewer>
-<model-viewer 
-src="./assets/binoculars.glb" 
-ios-src="./assets/binoculars.usdz"
-ar 
-ar-modes="scene-viewer webxr quick-look" 
-camera-controls 
-tone-mapping="neutral" 
-poster="./assets/poster.webp" 
-shadow-intensity="1" 
-autoplay>
-</model-viewer>
-<div class="model-container">
-    <!-- Overlay button -->
-    <button class="overlay-button" onclick="alert('Button clicked!')">Click Me</button>
-
-<model-viewer 
-src="./assets/RobotExpressive.glb" 
-ios-src="./assets/horse.usdz"
-ar 
-ar-modes="scene-viewer webxr quick-look" 
-camera-controls 
-tone-mapping="neutral" 
-poster="./assets/poster.webp" 
-shadow-intensity="1" 
-
-autoplay>
-</model-viewer>
-</div>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <img src="assets/logo.png" alt="Logo" id="splash-logo"> <!-- Replace with your logo file -->
     </div>
 
-   
+    <!-- Grid Container -->
+    <div class="grid">
+        <!-- Model Container 1 -->
+        <div class="model-container">
+            <button class="overlay-button" onclick="alert('Button clicked!')">Click Me</button>
+            <model-viewer 
+                src="./assets/binoculars.glb" 
+                ios-src="./assets/binoculars.usdz"
+                ar 
+                auto-rotate
+                interaction-prompt="none"
+                disable-zoom
+                ar-modes="scene-viewer webxr quick-look" 
+                camera-controls 
+                tone-mapping="neutral" 
+                poster="./assets/poster.webp" 
+                shadow-intensity="1" 
+                autoplay>
+            </model-viewer>
+        </div>
 
+        <!-- Model Container 2 -->
+        <div class="model-container">
+            <button class="overlay-button" onclick="alert('Button clicked!')">Click Me</button>
+            <model-viewer 
+                src="./assets/binoculars.glb" 
+                ios-src="./assets/binoculars.usdz"
+                ar 
+                auto-rotate
+                interaction-prompt="none"
+                disable-zoom
+                ar-modes="scene-viewer webxr quick-look" 
+                camera-controls 
+                tone-mapping="neutral" 
+                poster="./assets/poster.webp" 
+                shadow-intensity="1" 
+                autoplay>
+            </model-viewer>
+        </div>
+    </div>
+
+    <!-- JavaScript for Splash Screen -->
+    <script>
+        window.addEventListener('load', () => {
+            // Delay for 0.5 seconds and remove the splash screen
+            setTimeout(() => {
+                const splashScreen = document.getElementById('splash-screen');
+                splashScreen.classList.add('slide-up');
+            }, 1500);
+        });
+    </script>
 </body>
 </html>

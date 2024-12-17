@@ -6,7 +6,7 @@
     <title>3D Model Viewer</title>
     <!-- Include the model-viewer library -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="splash.css"> <!-- Add the new CSS file for the splash screen -->
+    <link rel="stylesheet" href="splash.css"> <!-- Splash screen CSS -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
@@ -16,7 +16,7 @@
         <img src="assets/logo.png" alt="Logo" id="splash-logo"> <!-- Replace with your logo file -->
     </div>
 
-    <!-- Grid Container -->
+    <!-- Scrollable Grid Container -->
     <div class="grid">
         <!-- Model Container 1 -->
         <div class="model-container">
@@ -55,12 +55,49 @@
                 autoplay>
             </model-viewer>
         </div>
+  
+      <!-- Model Container 2 -->
+        <div class="model-container">
+            <button class="overlay-button" onclick="alert('Button clicked!')">Click Me</button>
+            <model-viewer 
+                src="./assets/binoculars.glb" 
+                ios-src="./assets/binoculars.usdz"
+                ar 
+                auto-rotate
+                interaction-prompt="none"
+                disable-zoom
+                ar-modes="scene-viewer webxr quick-look" 
+                camera-controls 
+                tone-mapping="neutral" 
+                poster="./assets/poster.webp" 
+                shadow-intensity="1" 
+                autoplay>
+            </model-viewer>
+        </div>
     </div>
-
+          <!-- Model Container 2 -->
+          <div class="model-container">
+            <button class="overlay-button" onclick="alert('Button clicked!')">Click Me</button>
+            <model-viewer 
+                src="./assets/binoculars.glb" 
+                ios-src="./assets/binoculars.usdz"
+                ar 
+                auto-rotate
+                interaction-prompt="none"
+                disable-zoom
+                ar-modes="scene-viewer webxr quick-look" 
+                camera-controls 
+                tone-mapping="neutral" 
+                poster="./assets/poster.webp" 
+                shadow-intensity="1" 
+                autoplay>
+            </model-viewer>
+        </div>
+    </div>
+</div>
     <!-- JavaScript for Splash Screen -->
     <script>
         window.addEventListener('load', () => {
-            // Delay for 0.5 seconds and remove the splash screen
             setTimeout(() => {
                 const splashScreen = document.getElementById('splash-screen');
                 splashScreen.classList.add('slide-up');

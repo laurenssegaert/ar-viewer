@@ -12,9 +12,7 @@
     <!--  -->
 
     <div class="grid">
-        <iframe src="https://app.vectary.com/p/7X5BR8JS0lnSw8Hsl4t4K8" frameborder="0"></iframe>
-        <iframe src="https://app.vectary.com/p/4vEaaUhXGGpSRnezE12h8r" frameborder="0"></iframe>
-        <iframe src="https://app.vectary.com/p/6UZSNRzSSK8CeWIS9LHBvc" frameborder="0"></iframe>
+       
         <model-viewer 
         src="./assets/helmet.glb" 
         ios-src="./assets/helmet.usdz"
@@ -26,6 +24,45 @@
         shadow-intensity="1" 
         autoplay>
     </model-viewer>
+    <model-viewer 
+    src="./assets/helmet.glb" 
+    ios-src="./assets/helmet.usdz"
+    ar 
+    ar-modes="scene-viewer webxr quick-look" 
+    camera-controls 
+    tone-mapping="neutral" 
+    poster="./assets/poster.webp" 
+    shadow-intensity="1" 
+    autoplay>
+</model-viewer>
+<model-viewer 
+src="./assets/binoculars.glb" 
+ios-src="./assets/binoculars.usdz"
+ar 
+ar-modes="scene-viewer webxr quick-look" 
+camera-controls 
+tone-mapping="neutral" 
+poster="./assets/poster.webp" 
+shadow-intensity="1" 
+autoplay>
+</model-viewer>
+<div class="model-container">
+    <!-- Overlay button -->
+    <button class="overlay-button" onclick="alert('Button clicked!')">Click Me</button>
+
+<model-viewer 
+src="./assets/RobotExpressive.glb" 
+ios-src="./assets/horse.usdz"
+ar 
+ar-modes="scene-viewer webxr quick-look" 
+camera-controls 
+tone-mapping="neutral" 
+poster="./assets/poster.webp" 
+shadow-intensity="1" 
+
+autoplay>
+</model-viewer>
+</div>
     </div>
 
    

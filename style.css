@@ -26,3 +26,42 @@ iframe {
     height: 100%;
 
 }
+
+/* Model-viewer styling */
+model-viewer {
+    
+    background-color: rgb(237, 237, 237); /* Add a solid background color if needed */
+   
+
+}
+   /* Model Viewer container */
+   .model-container {
+    position: relative;
+ 
+}
+
+
+
+/* Button styling */
+.overlay-button {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    padding: 20px 20px;
+    background: #white;
+    color: black;
+    font-family: 'helvetica';
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.overlay-button:hover {
+    background: #0056b3;
+}
+

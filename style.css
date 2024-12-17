@@ -88,3 +88,14 @@ model-viewer {
 #splash-screen.slide-up {
     transform: translateY(-100%);
 }
+
+/* Change the color of the progress bar */
+model-viewer::part(progress-bar) {
+    background-color: red; /* Background of progress bar */
+}
+
+model-viewer::part(progress-bar-inner) {
+    background-color: #0056b3; /* Foreground color (loading progress) */
+    height: 6px; /* Custom height */
+    border-radius: 5px; /* Rounded corners */
+}
